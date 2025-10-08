@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulacka</title>
+</head>
+<body>
+    <h1>Kalkulacka</h1>
+    <img src="{% static 'kalkulacka/images/MeiMei.png' %}" alt="s" width="450px" height="100px">
+    <form method="post">
+        {% csrf_token %}
+
+        <input type="text" name="a">
+        <select name="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" name="b">
+        <input type="submit">
+        <h2>{{vysledok}}</h2>
+    </form>
+</body>
+</html>
