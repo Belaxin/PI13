@@ -5,23 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulacka</title>
+    <link rel="stylesheet" href="{% static 'kalkulacka/kalkulacka.css' %}">
 </head>
 <body>
+    <div class = "calc">
     <h1>Kalkulacka</h1>
-    <img src="{% static 'kalkulacka/images/MeiMei.png' %}" alt="s" width="450px" height="100px">
-    <form method="post">
-        {% csrf_token %}
 
-        <input type="text" name="a">
-        <select name="operator">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-        </select>
-        <input type="text" name="b">
-        <input type="submit">
-        <h2>{{vysledok}}</h2>
-    </form>
+        <form method="post" class = input>
+            {% csrf_token %}
+            <input type="text" name="a">
+            <select name="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input type="text" name="b">
+            <br>
+            <input type="submit">
+            <h2>{{vysledok}}</h2>
+        </form>
+    </div>
+    <img src="{% static 'kalkulacka/images/MeiMei.png' %}" alt="s" width="100px" height="30px" class = "mei">
 </body>
 </html>

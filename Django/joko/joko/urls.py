@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('jokoApp/', include('jokoApp.urls')),
     path('kalkulacka/', include('kalkulacka.urls')),
+    path('compCisla/', include('compCisla.urls')),
 ]
