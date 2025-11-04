@@ -107,7 +107,7 @@
                 elif operator == "/":
                         vysledok = a/b
                 else: vysledok = 0
-        return render(request, 'kalkulacka/index.html', {"vysledok"=vysledok, "vysledokB=vysledokB"})
+        return render(request, 'kalkulacka/index.html', {"vysledok":vysledok, "vysledokB:vysledokB"})
 
 10. css, obrazky
      - vytvorit priecinok static/nazov_app
