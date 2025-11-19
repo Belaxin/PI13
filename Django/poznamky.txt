@@ -95,8 +95,8 @@
         if request.method == "GET":
                 vysledok = 0
         if request.method == "POST":
-                a = int(request.POST[a])
-                b = int(request.POST[b])
+                a = int(request.POST['a'])
+                b = int(request.POST['b'])
                 operator = request.POST[operator]
                 if operator == "+":
                         vysledok = a+b
@@ -107,10 +107,10 @@
                 elif operator == "/":
                         vysledok = a/b
                 else: vysledok = 0
-        return render(request, 'kalkulacka/index.html', {"vysledok"=vysledok, "vysledokB=vysledokB"})
+        return render(request, 'kalkulacka/index.html', {"vysledok":vysledok, "vysledokB":vysledokB"})
 
 10. css, obrazky
-     - vytvorit priecinok static/nazov_app
+     - vytvorit priecinok v app foldery static/nazov_app
      - v tomto priecinku vytvorit css (napr kalkulacka.css)
      - do tohto priecinku nakopirovat obrazky
      - uplne na zaciatok {% load static %}
