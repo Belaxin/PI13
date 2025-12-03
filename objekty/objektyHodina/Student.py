@@ -1,4 +1,5 @@
 from Person import Person
+import datetime
 
 class Student(Person):
     def __init__(self, name, surName, year, trieda: str):
@@ -9,4 +10,4 @@ class Student(Person):
         print(f"Ahojky ja som {self.name} {self.surName} z triedy {self.trieda}.")
 
     def __str__(self):
-        return super().__str__()
+        return(f"{self.name} {self.surName} {(datetime.date.today().year - int(self.year))} - Student, Trieda: {self.trieda}")        

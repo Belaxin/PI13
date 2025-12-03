@@ -15,4 +15,4 @@ class Person:
 
     def __str__(self): 
         # Stringova reprezentacia objektu, pri print vypise toto
-        return(f"{self.name} {self.surName} {(datetime.date.today().year - int(self.year))}")
+        return(f"{self.name} {self.surName} {(datetime.date.today().year - int(self.year))}- Osoba")
