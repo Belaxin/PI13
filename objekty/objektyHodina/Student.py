@@ -7,3 +7,6 @@ class Student(Person):
     
     def greet(self):
         print(f"Ahojky ja som {self.name} {self.surName} z triedy {self.trieda}.")
+
+    def __str__(self):
+        return super().__str__()

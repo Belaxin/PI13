@@ -10,5 +10,8 @@ ucitel1.greet()
 ucitel1.declareAge()
 student1.greet()
 student1.declareAge()
+
+print(student1) 
+
 person1.greet()
 person1.declareAge()
