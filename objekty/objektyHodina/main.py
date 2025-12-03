@@ -36,8 +36,8 @@ person1.declareAge()
 
 for i in range(10):
     trieda = random.randint(0,3)
-    studenti.append(Student(menaList[random.randint(0,len(menaList)-1)], priezviskaList[random.randint(0,len(priezviskaList)-1)], rok[trieda], str(f"{triedaRad[trieda]}.{triedaPis[random.randint(0,3)]}")))
-    ucitelia.append(Ucitel(menaList[random.randint(0,len(menaList)-1)], priezviskaList[random.randint(0,len(priezviskaList)-1)], random.randint(1950, 2000),titul[random.randint(0,2)], predmet[random.randint(0,2)] ,str(f"{triedaRad[random.randint(0,3)]}.{triedaPis[random.randint(0,3)]}")))
+    studenti.append(Student(random.choice(menaList), random.choice(priezviskaList), rok[trieda], str(f"{triedaRad[trieda]}.{triedaPis[random.randint(0,3)]}")))
+    ucitelia.append(Ucitel(random.choice(menaList), random.choice(priezviskaList), random.randint(1950, 2000),titul[random.randint(0,2)], predmet[random.randint(0,2)] ,str(f"{triedaRad[random.randint(0,3)]}.{triedaPis[random.randint(0,3)]}")))
 print("\n\n\n")
 for i in ucitelia:
     print(i)
