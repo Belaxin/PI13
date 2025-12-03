@@ -6,15 +6,15 @@ import random
 triedaRad = ["I", "II", "III", "IV"]
 triedaPis = ["A", "B", "C", "D"]
 titul = ["Mgr.", "Ing.", "PaeDr."]
-predmet = ["Matematika", "Slovencina", "Fyizika"]
+predmet = ["Matematika", "Slovencina", "Fyzika"]
 rok = [2009, 2008, 2007, 2006]
 studenti = []
 ucitelia = []
 
-mena = open("objektyHodina\mena.txt", 'r', encoding="utf8")
-menaList = [line.strip() for line in mena.readlines()]
-priezviska = open("objektyHodina\priezviska.txt", 'r', encoding="utf8")
-priezviskaList = [line.strip() for line in priezviska.readlines()]
+with open("objektyHodina\mena.txt", 'r', encoding="utf8") as mena:
+    menaList = [line.strip() for line in mena.readlines()]
+with open("objektyHodina\priezviska.txt", 'r', encoding="utf8") as priezviska:
+    priezviskaList = [line.strip() for line in priezviska.readlines()]
 
 
 
