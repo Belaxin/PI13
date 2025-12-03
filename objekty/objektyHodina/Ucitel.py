@@ -2,7 +2,7 @@ from Person import Person
 import datetime
 
 class Ucitel(Person):
-    def __init__(self, name: str, surName: str, year: int, title: str, subject: str, classs= ""):
+    def __init__(self, name: str, surName: str, year: int, title: str, subject: str, classs= None):
         super().__init__(name, surName, year)  # inheritancia konstruktora
         self.subject = subject
         self.title = title
