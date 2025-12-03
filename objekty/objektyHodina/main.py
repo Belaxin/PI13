@@ -10,6 +10,10 @@ predmet = ["Matematika", "Slovencina", "Fyzika"]
 rok = [2009, 2008, 2007, 2006]
 studenti = []
 ucitelia = []
+triedy = []
+for i in range(4):
+    for j in range(4):
+        triedy.append(str(f"{triedaRad[i]}.{triedaPis[j]}"))
 
 with open("objektyHodina\mena.txt", 'r', encoding="utf8") as mena:
     menaList = [line.strip() for line in mena.readlines()]
@@ -33,11 +37,21 @@ print(ucitel1)
 person1.greet()
 person1.declareAge()
 
+for i in range(len(triedy)):
+    ucitelia.append(Ucitel(random.choice(menaList), random.choice(priezviskaList), random.randint(1950, 2000),random.choice(titul), random.choice(predmet), triedy[i]))
 
 for i in range(10):
     trieda = random.randint(0,3)
-    studenti.append(Student(random.choice(menaList), random.choice(priezviskaList), rok[trieda], str(f"{triedaRad[trieda]}.{random.choice(triedaPis)}")))
     ucitelia.append(Ucitel(random.choice(menaList), random.choice(priezviskaList), random.randint(1950, 2000),random.choice(titul), random.choice(predmet)))
+    
+for i in range(30):
+    trieda = random.randint(0,3)
+    studenti.append(Student(random.choice(menaList), random.choice(priezviskaList), rok[trieda], str(f"{triedaRad[trieda]}.{random.choice(triedaPis)}")))
+    
+
+random.shuffle(ucitelia)
+
+
 print("\n\n\n")
 for i in ucitelia:
     print(i)
