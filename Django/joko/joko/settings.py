@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'jokoApp',
     'kalkulacka',
     'compCisla',
+    'skuska',
 ]
 
 MIDDLEWARE = [

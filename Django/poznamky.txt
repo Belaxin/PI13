@@ -107,11 +107,7 @@
                 elif operator == "/":
                         vysledok = a/b
                 else: vysledok = 0
-<<<<<<< HEAD
         return render(request, 'kalkulacka/index.html', {"vysledok":vysledok, "vysledokB":vysledokB"})
-=======
-        return render(request, 'kalkulacka/index.html', {"vysledok":vysledok, "vysledokB:vysledokB"})
->>>>>>> aeca439d803398ba3ca7ecce97127476007ceed3
 
 10. css, obrazky
      - vytvorit priecinok v app foldery static/nazov_app
@@ -120,3 +116,36 @@
      - uplne na zaciatok {% load static %}
      - <link rel="stylesheet" href="{% static 'kalkulacka/kalkulacka.css' %}">
      - <img src="{% static 'kalkulacka/images/MeiMei.png' %}" alt="s" width="450px" height="100px">\
+
+
+11. Modely(models.py)
+
+     from django.db import models
+
+     class Osoba(models.Model):
+     meno = models.CharField(max_length=100)
+     priezvisko = models.CharField(max_length=100)
+     vek = models.IntegerField()
+     datum = models.DateField()
+     email = models.EmailField()
+     muz = models.BooleanField()
+
+     def __str__(self):
+          return(f"{self.meno} {self.priezvisko}")
+
+12. vytvorenie struktury databazy podla modelov:
+     python manage.py makemigrations
+     python manage.py migrate
+
+     databaza sa defaultne vytvara v subore db.sqlite3
+
+13. vytvorenie prveho uzivatela do admin rozhrania
+     python manage.py createsuperuser
+
+
+14. zahrnutie modelov do admin panela(admin.py):
+     
+     from django.contrib import admin
+     from .models import Osoba
+
+     admin.site.register(Osoba)
