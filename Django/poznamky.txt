@@ -149,3 +149,10 @@
      from .models import Osoba
 
      admin.site.register(Osoba)
+
+15. custom pomenovanie v admin paneli, pridame do classy v modeloch
+
+     class Meta:
+        verbose_name = "Student"
+        verbose_name_plural = "Studenti"
+        ordering = ["priezvisko"]

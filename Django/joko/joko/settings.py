@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'kalkulacka',
     'compCisla',
     'skuska',
+    'skola',
 ]
 
 MIDDLEWARE = [
